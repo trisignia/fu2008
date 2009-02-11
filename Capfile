@@ -7,13 +7,13 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 default_run_options[:pty] = true
 
 # be sure to change these
-set :user, 'fu2008'
-set :domain, 'fuckyou2008.com'
+set :user, 'jacob'
+set :domain, '67.23.0.192'
 set :application, 'fu2008'
 
 # the rest should be good
 # set :repository,  "#{user}@#{domain}:git/#{application}.git" 
-set :repository,  "git@github.com:lachlanhardy/#{application}.git"
+set :repository,  "git@github.com:jacobpatton/#{application}.git"
 set :deploy_to, "/var/www/#{application}" 
 set :deploy_via, :remote_cache
 set :scm, 'git'
