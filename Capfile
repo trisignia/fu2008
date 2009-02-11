@@ -31,4 +31,9 @@ namespace :deploy do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt" 
   end
+  
+  web.task :disable, :roles => :web do
+    run "cp #{current_path}/public/maintenance.html  #{shared_path}/system/maintenance.html"
+  end
+  
 end
